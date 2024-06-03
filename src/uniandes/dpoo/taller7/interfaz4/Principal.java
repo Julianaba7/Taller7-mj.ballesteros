@@ -1,4 +1,4 @@
-package uniandes.dpoo.taller7.interfaz2;
+package uniandes.dpoo.taller7.interfaz4;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -14,6 +14,8 @@ public class Principal extends JFrame{
 	
 	private Inferior inferior;
 	
+	private PanelTablero panelTablero;
+	
 	
 	
 	public Principal() {
@@ -23,14 +25,17 @@ public class Principal extends JFrame{
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLayout(new BorderLayout());
 		
-		superior = new Superior();
-		derecho = new Derecho();
-		inferior = new Inferior();
+		panelTablero = new PanelTablero(4); 
+        superior = new Superior(panelTablero);
+        inferior = new Inferior();
+		derecho = new Derecho(panelTablero, superior, inferior);
+		
 		
 		
 		add(superior, BorderLayout.NORTH);
 		add(derecho, BorderLayout.EAST);
 		add(inferior, BorderLayout.SOUTH);
+		add(panelTablero, BorderLayout.CENTER);
 		
 		
 		
