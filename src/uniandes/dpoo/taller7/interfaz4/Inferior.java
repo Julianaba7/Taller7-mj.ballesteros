@@ -23,7 +23,7 @@ public class Inferior extends JPanel{
 		
 		jugadas = new JLabel("Jugadas");
 		
-		jugadasTxt = new JLabel("0");
+		jugadasTxt = new JLabel("");
 		
 		jugador = new JLabel("Jugador");
 		
