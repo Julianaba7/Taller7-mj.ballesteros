@@ -22,7 +22,7 @@ public class Top10Panel extends JFrame
 {
 	
 
-	boolean esVisible = false;
+	boolean visible = false;
 
 	private Top10 Top10;
 	Top10 top10 = null;
@@ -87,13 +87,13 @@ public class Top10Panel extends JFrame
 		setLocationRelativeTo(null);
 		
 		//No se deberia ver al inicio
-		setVisible(esVisible); 
+		setVisible(visible); 
 		this.revalidate();
 	}
 	public void changeVisibility()
 	{
-		this.esVisible = !esVisible;
-		this.setVisible(esVisible);
+		this.visible = !visible;
+		this.setVisible(visible);
 	}
 
 }
